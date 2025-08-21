@@ -1,0 +1,121 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.calculator-container {
+    width: 300px;
+}
+
+#display {
+    width: 100%;
+    height: 80px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 2rem;
+    text-align: right;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    outline: none;
+    font-weight: 300;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.number-btn {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+.number-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+}
+
+.operator-btn {
+    background: rgba(255, 165, 0, 0.9);
+    color: white;
+}
+
+.operator-btn:hover {
+    background: rgba(255, 165, 0, 1);
+    transform: translateY(-2px);
+}
+
+.equals-btn {
+    background: rgba(76, 175, 80, 0.9);
+    color: white;
+    grid-row: span 2;
+}
+
+.equals-btn:hover {
+    background: rgba(76, 175, 80, 1);
+    transform: translateY(-2px);
+}
+
+.clear-btn {
+    background: rgba(244, 67, 54, 0.9);
+    color: white;
+}
+
+.clear-btn:hover {
+    background: rgba(244, 67, 54, 1);
+    transform: translateY(-2px);
+}
+
+.delete-btn {
+    background: rgba(156, 39, 176, 0.9);
+    color: white;
+}
+
+.delete-btn:hover {
+    background: rgba(156, 39, 176, 1);
+    transform: translateY(-2px);
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
